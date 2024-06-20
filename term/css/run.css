@@ -1,0 +1,212 @@
+.run {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 104px;
+    background-color: #eeeeee;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-color: #212328;
+}
+
+.volume{
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 18px;
+    background-color: transparent;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.volume span{
+    background-color: rgb(58, 58, 58);
+    padding: 9px;
+    box-sizing: border-box;
+}
+
+.material-icons {
+    margin: 0 10px;
+    cursor: pointer;
+    background: none;
+}
+
+.track-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.track-info span:first-child {
+    font-weight: bold;
+}
+
+.track-info span:last-child {
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+
+.progress-bar {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #ffffff;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity .2s;
+    margin-bottom: 10px; 
+}
+
+
+.time-info {
+    display: flex;
+    width: 50px;
+    font-size: 0.8em;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+span{
+    background-color: transparent;
+}
+
+.controls span:hover{
+    background-color: gray;
+}
+
+.rangeProgress{
+    width: 100%;
+}
+
+.rangeProgress input{
+    transform: translateY(10px);
+}
+
+.progress-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #ddd; /* Màu nền của thanh trượt */
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    margin-top: -5px; /* Điều chỉnh vị trí để thumb nằm chính giữa track */
+}
+
+.progress-bar::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #ddd; /* Màu nền của thanh trượt */
+}
+
+.progress-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgb(155, 116, 116);
+    cursor: pointer;
+}
+
+.progress-bar::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: transparent; /* Làm trong suốt nền của thanh trượt */
+    border-color: transparent;
+    color: transparent;
+}
+
+.progress-bar::-ms-fill-lower {
+    background: #a02121; /* Màu của phần đã chạy qua trên IE */
+}
+
+.progress-bar::-ms-fill-upper {
+    background: #e61414; /* Màu của phần chưa chạy qua trên IE */
+}
+
+.play-pause{
+    transition: transform 1s;
+}
+
+.material-icons {
+    transition: transform 0.8s; /* Thêm hiệu ứng chuyển đổi */
+}
+
+.material-icons.toggle {
+    transform: rotate(180deg); /* Xoay 360 độ khi chuyển đổi */
+}
+
+.volume-slider-container {
+    display: none; /* Ẩn mặc định */
+    position: absolute;
+    bottom: 62px; /* Điều chỉnh vị trí so với nút âm lượng */
+    left: 301px;
+    transform: translateX(-50%);
+    background: rgb(53, 53, 53);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.volume-slider {
+    -webkit-appearance: slider-vertical; /* Chỉ định thanh trượt dọc */
+    writing-mode: bt-lr; /* Đảm bảo hiển thị thanh trượt dọc */
+    width: 21px;
+    height: 150px;
+    background: #ffffff;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+.volume-slider:hover {
+    opacity: 1;
+}
+
+#shuffle{
+    opacity: 0.5;
+}
+
+#repeat{
+    opacity: 0.5;
+}
+
+.material-icons.toggle_opacity {
+    opacity: 1 !important;
+}
+

@@ -1,0 +1,341 @@
+.mainLeft {
+    position: fixed; /* Cố định vị trí trên màn hình */
+    width: 240px;
+    height: 100%; /* Chiều cao 100% màn hình */
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    padding-top: 58px;
+    box-sizing: border-box; /* Tính cả padding và border vào kích thước phần tử */
+    border-right: 2px solid rgba(255, 255, 255, 0.322);
+}
+
+.mainLeft.collapsed {
+    width: 80px;
+}
+
+.mainLeft.collapsed .menu-item span:last-child {
+    opacity: 0;
+}
+
+.mainLeft.collapsed .queue {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 15px; /* Thêm khoảng đệm bên trong cho các mục */
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.menu-item:hover {
+    background-color: #444;
+}
+
+.material-icons {
+    margin-right: 10px;
+}
+
+
+.queue {
+    border-top: 2px solid rgba(255, 255, 255, 0.452);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.create-playlist {
+    width: 80%;
+    margin: 10px auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #353535; /* Nền xám */
+    color: white; /* Chữ trắng */
+    border: none;
+    padding: 8px 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.create-playlist:hover {
+    background-color: #b3b3b3; /* Màu nền khi hover */
+}
+
+.create-playlist .material-icons.add-icon {
+    margin-right: 10px;
+    color: white; /* Màu trắng cho icon dấu cộng */
+    background-color: gray; /* Nền xám cho icon dấu cộng */
+    border-radius: 50%; /* Bo tròn */
+    padding: 5px; /* Khoảng cách bên trong icon */
+}
+
+.playlist-list {
+    list-style: none;
+    padding: 0;
+}
+
+.playlist-list li {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.playlist-list li:hover {
+    background-color: #a3a3a3;
+}
+
+.playlist-list .material-icons.favorite-icon {
+    margin-right: 10px;
+    color: #ff4081; /* Màu của icon yêu thích */
+}
+
+
+/* Phần maincenter */
+
+
+.mainCenter {
+    position: fixed; /* Cố định trên màn hình */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translate(-80%, -55%); /* Dịch chuyển để căn giữa chính xác */
+    width: 40%; /* Rộng 40% màn hình */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 400px;
+    height: 400px;
+    animation: rotate 4s linear infinite; /* Hiệu ứng xoay */
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Phần main :right */
+
+.mainRight {
+    position: fixed; /* Cố định trên màn hình */
+    top: 100px;
+    right: 50px;
+    width: 30%; /* Độ rộng 30% màn hình */
+    height: 100vh; /* Chiều cao 100% màn hình */
+    background-color: #000000; /* Màu nền đen */
+    color: white; /* Màu chữ trắng */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.playlist-header {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.tab.active {
+    border-bottom: 2px solid white;
+}
+
+.playlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1; /* Cho phép danh sách phát chiếm không gian còn lại */
+    overflow-y: auto; /* Thêm thanh cuộn dọc */
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+
+.playlist-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.song-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.song-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.artist {
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+.song-duration {
+    margin-left: 10px;
+    color: #bbb;
+}
+
+.modal{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    background-color: #00000091 !important;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.modal-content{
+    width: 640px;
+    height: 360px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #212121;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.modal-content h2{
+    margin-bottom: 30px;
+    background-color: transparent;
+    width: 100%;
+}
+
+#create-playlist-song{
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+.form-group{
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 50px;
+}
+
+.form-group input{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    font-size: 18px;
+    padding: 10px 0px;
+}
+#create-playlist-song button{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+#create-playlist-song .cancel{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+#create-playlist-song .cancel:hover{
+    background-color: #444;
+}
+
+#create-playlist-song #create:hover{
+    background-color: rgb(206, 206, 206);
+}
+
+#createPlaylistModal input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    color: white;
+    transition: border-bottom-color 1s;
+    outline: none; 
+}
+
+#createPlaylistModal input[type="text"]::placeholder {
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+#createPlaylistModal input[type="text"]:focus {
+    border-bottom-color: #2196F3; 
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.playlist-header{
+    font-weight: bold;
+}
+
+
+/* Lưu danh sách phát  */
+
+#playlistModal button{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+#saveList{
+    background: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: end;
+}

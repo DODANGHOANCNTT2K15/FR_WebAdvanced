@@ -1,0 +1,91 @@
+body{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.right{
+    width: 50%;
+    height: 100vh;
+    background-color: aquamarine;
+}
+
+.right img{
+    width: 100%;
+    height: 100%;
+}
+
+.left{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.coverLeft{
+    padding-top: 30px;
+    width: 500px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+#loginForm input{
+    width: 100%;
+    margin: 20px 0px;
+    padding: 15px;
+    background-color: grey;
+    color: white;
+    box-sizing: border-box;
+}
+
+#loginForm button{
+    width: 100%;
+    margin: 20px 0px;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input::placeholder {
+    color: white;
+}
+
+#registerForm input{
+    width: 100%;
+    margin: 20px 0px;
+    padding: 15px;
+    background-color: grey;
+    color: white;
+    box-sizing: border-box;
+}
+
+#registerForm button{
+    width: 100%;
+    margin: 20px 0px;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#forgot input{
+    width: 100%;
+    margin: 20px 0px;
+    padding: 15px;
+    background-color: grey;
+    color: white;
+    box-sizing: border-box;
+}
+
+#forgot button{
+    width: 100%;
+    margin: 20px 0px;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+}
